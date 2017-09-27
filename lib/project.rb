@@ -14,3 +14,7 @@ class Project
     end
     projects.sort_by {|porject| project.title}
   end
+
+  def save()
+      result = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
+      @id = result.first["id"].to_i()
