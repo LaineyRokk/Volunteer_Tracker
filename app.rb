@@ -1,0 +1,7 @@
+require 'sinatra'
+require 'sinatra/reloader'
+also_reload '.lib/**/*.rb'
+require 'pry'
+require 'pg'
+require './lib/project'
+requie './lib/volunteer'
